@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.team2.danim.plan.PlanMapper">
+
+<!-- 게시물 등록 -->
+<insert id="uploadPlan" parameterType="com.team2.danim.plan.Plan_write" >
+	insert into plan_write values(plan_write_seq.nextval,
+	#{p_writer},
+	#{p_title},
+	#{p_titleFile},
+	#{p_days},
+	#{p_startDate},
+	#{p_person},
+	#{p_place},
+	#{p_plan},
+	#{p_budget},
+	#{p_freeWrite},
+	#{p_setTitle},
+	#{p_setItem},
+	#{p_setPrice},
+	sysdate)
+</insert>
+
+<select id="getAllPlan" resultType="com.team2.danim.plan.Plan_write">
+	select * from plan_write order by p_writedate desc
+</select>
+
+<select id="getPlan" resultType="com.team2.danim.plan.Plan_write">
+	select * from plan_write where p_no = #{p_no}
+</select>
+
+<select id="getTotalPlan" resultType="java.lang.Integer">
+select count(*) from plan_write
+</select>
+
+<select id="getPlanPaging"
+		parameterType="com.team2.danim.Criteria3"
+		resultType="com.team2.danim.plan.Plan_write">
+		select *
+		from (
+		select rownum as rn, p_no, p_writer,p_title,p_titleFile,p_days,
+		p_startDate,p_person,p_place,p_plan,p_budget,p_freeWrite
+		p_setTitle, p_setItem,p_setPrice,p_writedate
+		from (
+		select * from plan_write order by p_writedate desc
+		)
+		)
+		where rn &lt;= (#{pageNum} * #{amount}) and rn > (#{pageNum} -1) *
+		#{amount}
+</select>
+
+
+<select id="getp_searchTitle" resultType="java.lang.Integer" 
+		parameterType="com.team2.danim.plan.Plan_write">
+		select count(*) from plan_write where p_title LIKE '%'||#{p_title}||'%' 
+</select>
+
+
+<select id="p_searchTitle"
+		resultType="com.team2.danim.plan.Plan_write" parameterType="map">
+		SELECT *
+		from (
+		select rownum as rn, p_no, p_writer, p_title, p_titleFile, p_days,
+		p_startDate, p_person, p_place, p_plan, p_budget, p_freeWrite,
+		p_setTitle, p_setItem, p_setPrice, p_writedate
+		from (
+		select * from plan_write where p_title LIKE '%'||#{p_searchWrite}||'%' 
+		order by p_writedate desc
+		)
+		)
+		where rn &lt;= (#{pageNum} * #{amount}) and rn > (#{pageNum} -1) *
+		#{amount}
+</select>
+
+
+
+<select id="getPlaceCount"
+		resultType="java.lang.Integer"
+		parameterType="com.team2.danim.plan.Plan_write">
+		select count(*) from plan_write where p_place LIKE
+		'%'||#{p_place}||'%'
+</select>
+
+<select id="p_searchPlace"
+		resultType="com.team2.danim.plan.Plan_write" parameterType="map">
+		SELECT *
+		from (
+		select rownum as rn, p_no, p_writer, p_title, p_titleFile, p_days,
+		p_startDate, p_person, p_place, p_plan, p_budget, p_freeWrite,
+		p_setTitle, p_setItem, p_setPrice, p_writedate
+		from (
+		select * from plan_write where p_place LIKE '%'||#{p_searchWrite}||'%' 
+		order by p_writedate desc
+		)
+		)
+		where rn &lt;= (#{pageNum} * #{amount}) and rn > (#{pageNum} -1) *
+		#{amount}
+</select>	
+
+<select id="getPlaceTitleCount"
+		resultType="java.lang.Integer"
+		parameterType="com.team2.danim.plan.Plan_write">
+		select count(*) from plan_write where 
+		(p_title LIKE '%'||#{p_title}||'%' OR p_place LIKE '%'||#{p_place}||'%')
+</select>
+
+<select id="p_searchAll" resultType="com.team2.danim.plan.Plan_write" parameterType="map">
+		SELECT *
+		from (
+			select rownum as rn, p_no, p_writer, p_title, p_titleFile, p_days,
+			p_startDate, p_person, p_place, p_plan, p_budget, p_freeWrite,
+			p_setTitle, p_setItem, p_setPrice, p_writedate
+		from (
+			select * from plan_write where (p_title || p_place) like '%'||#{p_searchWrite}||'%'
+			order by p_writedate desc
+		)
+		)
+		where rn &lt;= (#{pageNum} * #{amount}) and rn > (#{pageNum} -1) *
+		#{amount}
+</select>	
+
+
+<delete id="deletePlan" parameterType="com.team2.danim.plan.Plan_write">
+	delete from plan_write where p_no = #{p_no}
+</delete>
+
+
+</mapper>

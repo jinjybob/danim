@@ -1,0 +1,336 @@
+.textarea_wrapper{
+	display: flex;
+    justify-content: center;
+    margin-top: 30px;
+       text-align: center;
+}
+.btnCover{
+	background: none;
+	border: none;
+	margin-top: 2px;
+}
+#repbox_title{
+	text-align: center;
+}
+.reply_wrapper{
+	border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to bottom right, #38CEB5, #6D1E91);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    /* height: 50px; */
+    width: 70%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-left: 3px;
+    margin-right: 3px;
+	justify-content: space-around;
+	margin: 3px;	
+}	
+.repBox{
+	display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.schedule_cell{
+	margin: 1px;
+}
+.arrowImg:hover{
+	filter: invert(81%) sepia(17%) saturate(1561%) hue-rotate(113deg) brightness(86%) contrast(89%);
+	transition: 0.3s;
+}
+
+.totalText{
+	width:80%;
+	height:150px;
+border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to bottom right, #38CEB5, #6D1E91);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    width: 80%;
+    /* height: 140px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dtContent{
+	width:80%;
+	height:120px;
+	border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to bottom right, #38CEB5, #6D1E91);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    width: 70%;
+    display: flex;
+    /* height: 80px; */
+    justify-content: center;
+    align-items: center;
+}
+
+.scheTitle, .dtTitle, .trTitle{
+margin-top: 10px;
+margin-bottom: 10px;
+}
+.scheduleBox{
+    display: flex;
+    justify-content: center;
+}
+.schedule_con{
+	border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to bottom right, #38CEB5, #6D1E91);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    /* height: 50px; */
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3px;
+    margin-right: 3px;
+	
+}
+
+.schedule_wrapper{
+	display: inline-block;
+    justify-content: center;
+    flex-direction: row;
+    width: 70%;
+	border: 2px solid rgb(232, 248, 240);
+    border-top: none;
+    padding-bottom: 10px;
+}
+
+
+	.scheduleController_wrapper{
+		display: flex;
+    justify-content: center;
+	margin-top: 20px;
+    margin-bottom: 0px;
+	}
+.scheduleController{
+	display: flex;
+    border: 2px solid  rgb(232, 248, 240);
+    width: 70%;
+}
+
+
+.totalroute_content{
+	text-align: center;
+	border-bottom: 2px solid #545479;
+	width: 60%;
+	display: inline-block;
+	padding-bottom: 5px;
+}
+.img_box{
+	width: 33%;
+    height: 400px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
+.imgContainer_wrapper{
+text-align: center;
+}
+.imgContainer{
+	/* border: 1px solid #38CEB5; */
+}
+
+.totalroute_title{
+	margin-bottom: 10px;
+}	
+.totalRoute_wrapper{
+
+	margin-top: 20px;
+	margin-bottom: 20px ;
+	text-align: center;
+}
+
+.uninInfo_content{
+margin-left: 10px;
+margin-right: 10px;
+
+}
+
+.unitInfo{
+	border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to bottom right, #38CEB5, #6D1E91);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+	text-align: center;
+	margin-right: 10px;
+}
+
+.content_wrapper{
+	margin-top: 30px;
+}
+.titleBox{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.totalReview{
+	text-align: center;
+}
+
+.dailySelected{
+	display: none;
+    height: 100%;
+    font-size: 22pt;
+}
+
+.dailySelected.activate{
+	display: block;
+	background-color: aliceblue;
+	
+}
+
+
+.daySelector_wrapper{
+ width: 80%;
+ text-align: center;
+ 
+}
+
+textarea{
+	width: 100%;
+	resize: none;
+}
+
+.dailyBox{
+	display: none;
+	text-align: center;
+	justify-content: center;
+}
+
+.dailyBox.activate{
+	display: block;
+}
+
+.daily_schedule.active{
+
+	background-color: red;
+}
+
+#daily_schedule_con{
+width: 25%;
+}
+
+.axis{
+	width: 15%;
+}
+
+.cell{
+	width: 25%;
+}
+
+#schedule_inner_nav>a {
+	border: 1px solid black;
+}
+/* Dropdown Button */
+.dropbtn {
+	background-color: #4CAF50;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+	background-color: #3e8e41;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+	background-color: #f1f1f1
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+	display: block;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+}
+
+#set_rbr_txt{
+	height: 80px;
+	padding-top: 12px;
+	font-size: 13pt;
+}
+
+#set_rbr_txt::placeholder{
+	font-size: 13pt;
+	padding-top: 10px;
+}
+
+#set_rbr_txt:focus{
+	outline: none;
+}
+
+.textarea_con button{
+	width: 150px;
+    height: 40px;
+    font-size: 13pt;
+    border: 1px dotted #353535;
+    color: #404040;
+    border-radius: 5px;
+    background-color: transparent;
+    margin: 5px;
+    margin-top: 15px;
+}
+
+#r_delDiv{
+	width: 90%;
+	text-align: right;
+}
+
+#r_delDiv button{
+	width: 150px;
+    height: 40px;
+    font-size: 13pt;
+    border: 1px dotted #353535;
+    color: #404040;
+    border-radius: 5px;
+    background-color: transparent;
+    margin: 5px;
+}
+
+
+
+
+

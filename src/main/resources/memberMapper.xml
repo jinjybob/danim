@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.team2.danim.member.MemberMapper">
+
+	<select id="getMemberByID"
+		resultType="com.team2.danim.member.Member">
+		select * from danim_member where dm_id = #{dm_id}
+	</select>
+
+	<insert id="register"
+		parameterType="com.team2.danim.member.Member">
+		insert into danim_member
+		values (#{dm_id}, #{dm_pw},
+		#{dm_nickname}, #{dm_email}, #{dm_addr, jdbcType=VARCHAR}, #{dm_photo, jdbcType=VARCHAR}, 'N')
+	</insert>
+	
+	<delete id="deleteMember"
+		parameterType="com.team2.danim.member.Member">
+		delete from danim_member
+		where dm_id = #{dm_id}	
+	</delete>
+	
+	<update id="updateMember" parameterType="com.team2.danim.member.Member">
+	update danim_member
+	set dm_pw=#{dm_pw}, dm_nickname=#{dm_nickname}, dm_email=#{dm_email}
+	where dm_id = #{dm_id}
+	</update>
+	
+	<select id="checkOverId" parameterType="String" resultType="int">
+	select count(*) from danim_member where dm_id=#{dm_id}
+	</select>
+	
+	<select id="checkOverNick" parameterType="String" resultType="int">
+	select count(*) from danim_member where dm_nickname=#{dm_nickname}
+	</select>
+	
+	<select id="checkOverMail" parameterType="String" resultType="int">
+	select count(*) from danim_member where dm_email=#{dm_email}
+	</select>
+	
+	<select id="checkExistId" parameterType="String" resultType="com.team2.danim.member.Member">
+	select * from danim_member where dm_id=#{dm_id}
+	</select>
+	
+	<select id="findId" parameterType="String" resultType="String">
+	select dm_id from danim_member where dm_email=#{dm_email}
+	</select>
+	
+	<select id="isValidInfo" resultType="com.team2.danim.member.Member">
+	select * from danim_member where dm_id=#{dm_id} and dm_email=#{dm_email}
+	</select>
+	
+	<update id="searchPw" parameterType="com.team2.danim.member.Member">
+	update danim_member set dm_pw=#{dm_pw} where dm_id=#{dm_id} and dm_email=#{dm_email}
+	</update>
+</mapper>

@@ -1,0 +1,673 @@
+@charset "UTF-8";
+#test{
+opacity:0;
+right:40px;
+top : 205px;
+  
+/*   overflow: hidden;*/
+}
+#penImg #penimgg{
+	/* border: 1px solid #96e4d7; */
+	position:fixed;
+	right:65px;
+	top : 404px;
+	border-radius: 20px;
+}
+#write_cover:hover #test{
+	
+	transition:all 3s;
+	opacity:1;
+	width: auto;
+ 	height: auto;
+	text-decoration-color: aliceblue;
+	background-color: aliceblue;
+}
+#write_cover:hover #penimgg{
+	transition:all 0.7s ease-out;
+	right:15px;
+	top : 404px;
+	
+	/* border: 1px solid #9f74b1; */
+
+}
+
+
+#write_cover{
+	position:fixed;
+	right:30px;
+top : 400px;
+	width : 100px;
+	height : 40px;
+	display: flex;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 11pt;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+.theme_select_btn{
+	margin-right: 30px;
+    color: #000000;    
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to bottom right, #38CEB5, #6D1E91);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    width: 150px;
+    height: 40px;
+	text-align: center;
+	margin-bottom: 10px; 
+		display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	
+}
+#review_write_div{
+	padding-left: 94%;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	transition : 2s;
+}
+
+
+/* #review_write_div div{
+	border: 1px solid #38CEB5;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 11pt;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+} */
+/* #review_write_div a{
+	border: 3px solid #38CEB5;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 11pt;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+} */
+.location_select_btn{
+	margin-right: 30px;
+	 border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to bottom right, #38CEB5, #6D1E91);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+ width: 100px;
+	height: 40px;
+	margin-bottom: 10px; 
+	text-align: center;
+		display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.budget_select_btn{
+	margin-right: 30px;
+	border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to bottom right, #38CEB5, #6D1E91);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+	width: 100px;
+	text-align: center;
+	margin-bottom: 10px; 
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+.location_selected_btn{
+	text-align: center;
+}
+
+#direct_input{
+	margin-left: 20px;		
+	display: flex;
+	align-items: center;
+	}
+#headcount_value1{
+	width: 50px;
+	text-align: center;
+	margin-left: 5px;
+	border:none;
+	border-bottom: 1px solid black;
+	
+}
+#headcount_value1:focus{
+	border:none;
+	border-bottom: 1px solid black;
+	outline: none;
+}
+#headcount{
+border: none;
+	}
+#head_count_div{
+	display: flex;
+	align-items: center;
+}
+#headcount_select_btn{
+	background: none;
+	border: none;
+}
+#check_img{
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+#review_close_icon{
+	width: 30px;
+}
+#selectCancel{
+	background-color: white;
+	color: black;
+	border-radius: 20px;
+	width: 80px;
+	text-align: center;
+	border: 2px solid gray;;
+	padding-top: 4px;
+    padding-bottom: 3px;
+}
+.deleteBtn{
+	padding-left:2px;
+	width: 15px;
+	height: 15px;
+}
+.selected_headcount{
+	margin-right:15px;
+	display: flex;
+	align-items: center;
+	border: 2px solid transparent;
+    border-radius: 20px;
+	border: 2px solid gray;    
+    padding-left: 7px;
+    padding-right: 5px;
+        padding-top: 4px;
+    padding-bottom: 3px;
+}
+.budget_selected_btn{
+	display: flex;
+	align-items: center;
+	border: 2px solid gray;
+	margin-right: 15px;
+	 border-radius: 20px;
+	     padding-left: 7px;
+    padding-right: 5px;
+        padding-top: 4px;
+    padding-bottom: 3px;
+}
+.location_selected_btn{
+	display: flex;
+	align-items: center;
+	border: 2px solid gray;
+	margin-right: 15px;
+ border-radius: 20px;
+     padding-top: 4px;
+    padding-bottom: 3px;
+     padding-left: 7px;
+    padding-right: 5px;
+}
+.theme_selected_btn{
+	display: flex;
+	align-items: center;
+	border: 2px solid gray;
+	margin-right: 15px;
+	 border-radius: 20px;
+	     padding-left: 7px;
+    padding-right: 5px;
+        padding-top: 4px;
+    padding-bottom: 3px;
+}
+#revuew_write{
+	margin-right: 30px;
+}
+#revuew_write a:visited{
+	text-decoration: none;
+	color: black;
+}
+#choosedVal{
+	margin-left: 15px;
+}
+.budget_selected_btn{
+	text-align: center;
+}
+#review_icon{
+	width: 20px;
+	height: 20px;
+}
+
+#icon_div{
+	align-items: center;
+	display: flex;
+	margin-bottom: 5px;
+}
+#budget_span{
+margin-top: 30px;
+display: inline;
+text-align: center;
+}
+
+/* -------------------------------------------- */
+
+
+#r_write_Title{
+text-align: center; 
+margin-top: 50px;
+margin-bottom: 30px;
+}
+
+#r_reviewTitle{
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 12pt;
+}
+
+#r_reviewTitle input{
+	width: 250px;
+	height: 30px;
+	text-align: center;
+	border: none;
+	border-bottom: 1px solid #404040;
+	font-size: 15pt;
+}
+
+#r_reviewTitle input::placeholder{
+	text-align: center;	
+	font-size: 12pt;
+}
+
+#r_reviewTitle input:focus{
+	outline: none;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+
+#inputContainer{
+	display: none;
+	margin-right: 15px;
+	font-size: 10pt;
+}
+
+#selectBox{
+	width:70px;
+	height: 30px;
+	text-align: center;
+	margin-right: 20px;
+	border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to bottom right, #38CEB5, #6D1E91);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+#selectBox:focus{
+	outline: none;
+}
+
+#selectBoxDirect{
+	width: 50px;
+	height: 20px;
+	text-align: center;
+	border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to bottom right, #38CEB5, #6D1E91);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+#selectBoxDirect:focus{
+	outline: none;
+}
+
+#selectBoxDirect::-webkit-outer-spin-button,
+#selectBoxDirect::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#selectBox2{
+	width: 105px;
+	height: 30px;
+	text-align: center;
+    margin-right: 20px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to bottom right, #38CEB5, #6D1E91);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+#selectBox2:focus{
+	outline: none;
+}
+
+#selectBox3{
+	width: 105px;
+	height: 30px;
+	text-align: center;
+    margin-right: 20px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to bottom right, #38CEB5, #6D1E91);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+#selectBox3:focus{
+	outline: none;
+}
+
+#selectBox4{
+	width: 70px;
+	height: 30px;
+	text-align: center;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to bottom right, #38CEB5, #6D1E91);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+#selectBox4:focus{
+	outline: none;
+}
+
+/* 여기부터 지도 */
+#map{
+	width: 80%;
+	height: 500px;
+	text-align: center;
+	margin: auto;
+	border: 1px solid #404040;
+}
+
+#pac-input{
+	width: 40%;
+	height: 30px;
+	text-align: center;
+	border-radius:5px;
+	border: 1px solid #404040;
+	margin-top: 3px;
+}
+
+#pac-input::placeholder{
+	text-align: center;
+}
+
+#remove-line{
+	height: 30px;
+	border-radius:5px;
+	border: 1px solid #404040;
+	background-color: white;
+	margin-top: 3px;
+}
+
+.custom-map-control-button{
+	height: 30px;
+	border-radius:5px;
+	border: 1px solid #404040;
+	background-color: white;
+	margin-top: 3px;
+}
+
+/* 여기부터 모든 일정 */
+
+.dropdown-content {
+/* Dropdown Content (Hidden by Default) */
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+/* Links inside the dropdown */
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	font-size: 12pt;
+	font-weight: normal;
+}
+
+.dropdown-content a:hover {
+/* Change color of dropdown links on hover */
+	background-color: #f1f1f1
+}
+#prevbtnDiv{
+	width:90px;
+	margin: auto;
+	border-radius: 40px;
+	background-color: #9f74b1;
+}
+#prevbtnDiv a{
+	color: white;
+	font-size: 17pt;
+}
+
+
+#allSchedule_wrapper{
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+#schedule_inner_nav{
+	display: flex;
+}
+
+#schedule{
+	width: 90%;
+	text-align: center;
+}
+
+#daily_schedule_con{
+	width: 25%;
+	margin-right: 10px;
+	border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to bottom right, #38CEB5, #6D1E91);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.dropbtn {
+	/* Dropdown Button */
+	color: black;
+    font-size: 16px;
+    border: 1px solid;
+    border-radius: 30px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    padding-top: 1.6px;
+    margin-top: 1.5px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+/* Dropdown button on hover & focus */
+	 background-color: #96e4d7; 
+}
+
+#dropbtnPlus{
+	width: 16px;
+	width: 16px;
+}
+
+.daily_schedule.active{
+	font-weight: bold;
+	font-size: 15pt;
+}
+
+.insert_col_back{
+	font-size: 12pt;
+	font-weight: normal;
+}
+
+.delete_col_back{
+	font-size: 12pt;
+	font-weight: normal;
+}
+
+
+.scehduleBox{
+	width: 700px;
+    height: 130px;
+    margin: auto;
+    margin-bottom: 30px;
+    border-bottom: 1px dotted #404040;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.scehduleBox::-webkit-scrollbar{
+	width: 3px;
+}
+
+.scehduleBox::-webkit-scrollbar-thumb {
+   background-color: #96e4d7; /*스크롤바의 색상*/
+}
+ 
+.scehduleBox::-webkit-scrollbar-track {
+    background-color: white; /*스크롤바 트랙 색상*/
+}
+
+.dailyBox{
+	text-align: center;
+	display: block;
+	margin-top: 30px;
+}
+
+.dailyBox textarea{
+	width: 80%;
+    height: 150px;
+    margin: auto;
+    font-size: 11pt;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 20px;
+    border: none;
+}
+
+.dTextDiv{
+	width: 80%;
+	margin: auto;
+	border: 3px solid transparent;
+	border-radius: 20px;
+	background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to bottom right, #6D1E91, #38CEB5);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    text-align: center;
+}
+
+.dailyBox textarea:focus{
+	outline: none;
+}
+
+.schedule_wrapper{
+	margin-bottom: 10px;
+}
+
+/* 여행총후기 */
+#d1Img_container{
+	text-align: center;
+}
+.preview{
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
+	border: 3px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to bottom right, #38CEB5, #6D1E91);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+	width: 200px;
+	height: 100px;
+}
+
+#totalText{
+	width: 80%;
+	padding-top: 20px;
+	font-size: 11pt;
+	font-weight: bolder;
+    text-align: center;
+    border: none;
+}
+
+#totalTextDiv{
+	margin:auto;
+	width: 80%;
+	height: 200px;
+	border: 3px solid transparent;
+	border-radius: 20px;
+	color: #404040;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to bottom right, #6D1E91, #38CEB5);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+	
+}
+
+#totalText:focus{
+	outline: none;
+}
+
+#r_writeAllreview {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+#allSchedule{
+	width: 80%;
+	margin: auto;
+}
+
+
+/* 등록 버튼 */
+#review_submit{
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 50px;
+}
+
+#review_submit button{
+	width: 150px;
+	height: 40px;
+	font-size: 13pt;
+	border: 1px dotted #404040;
+	color: #404040;
+	border-radius:5px;
+	background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

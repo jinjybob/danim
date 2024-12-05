@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.team2.danim.review.ReviewMapper">
+
+
+<select id="getAllReview" resultType="com.team2.danim.review.ReviewBean">
+select * from REVIEW_BOARD order by rb_date desc
+
+</select>
+
+<select id="getTitleJSON" resultType="com.team2.danim.review.ReviewBean">
+
+select * from REVIEW_BOARD
+where rb_title like '%'||#{rb_title}||'%'
+
+</select>
+
+<select id="getfilterdByJSON" resultType="com.team2.danim.review.ReviewBean">
+
+select * from REVIEW_BOARD 
+where 
+<if test="rb_headNum !=''">
+rb_headNum = #{rb_headNum} and 
+</if>
+<if test="rb_budget !=''">
+rb_budget &lt;= #{rb_budget} and 
+</if>
+rb_theme like '%'||#{rb_theme}||'%' and rb_location like '%'||#{rb_location}||'%' order by rb_date desc
+
+</select>
+
+<insert id="insert" parameterType="com.team2.danim.review.ReviewBean">
+
+insert into REVIEW_BOARD values(review_board_seq.nextval, #{rb_title}, 0, 0, 0, sysdate, #{rb_text},#{rb_headNum},
+#{rb_budget},#{rb_theme},#{rb_location},#{rb_img},#{rb_username},#{rb_coordinate},#{rb_d1Schedule},#{rb_d1Text},
+#{rb_d2Schedule},#{rb_d2Text},#{rb_d3Schedule},#{rb_d3Text},#{rb_d4Schedule},#{rb_d4Text},#{rb_d5Schedule},#{rb_d5Text},#{rb_d6Schedule},#{rb_d6Text},
+#{rb_d7Schedule},#{rb_d7Text},#{rb_d8Schedule},#{rb_d8Text},#{rb_d9Schedule},#{rb_d9Text},#{rb_d10Schedule},#{rb_d10Text},#{rb_totalroute},#{rb_totalday})
+
+</insert>
+
+<select id="selectDetail" resultType="com.team2.danim.review.ReviewBean">
+select * from REVIEW_BOARD where rb_no = #{rb_no}
+
+</select>
+
+<update id="viewPlus" parameterType="com.team2.danim.review.ReviewBean">
+update REVIEW_BOARD set rb_viewcount = rb_viewcount +1 where rb_no = #{rb_no}
+
+</update>
+
+<select id="getReply"
+		resultType="com.team2.danim.review.Review_reply">
+		select * from review_reply where rbr_rb_no = #{rbr_rb_no} order by
+		rbr_when desc
+	</select>
+	
+	<insert id="wirteReplyByJSON" parameterType="com.team2.danim.review.Review_reply">
+insert into review_reply values(review_reply_seq.nextval,#{rbr_rb_no},#{rbr_owner},#{rbr_txt},sysdate)	
+	</insert>
+	
+	<update id="repCountPlus" parameterType="com.team2.danim.review.ReviewBean">
+	update REVIEW_BOARD set rb_commentcount = #{rb_commentcount} where rb_no = #{rb_no}
+	</update>
+	
+	<delete id="deleteReplyByJSON" parameterType="com.team2.danim.review.Review_reply">
+	
+	delete from review_reply where rbr_no = #{rbr_no}
+	</delete>
+	
+	<update id="repCountMinus" parameterType="com.team2.danim.review.ReviewBean">
+	update REVIEW_BOARD set rb_commentcount = #{rb_commentcount} where rb_no = #{rb_no}
+	</update>
+
+	<delete id="deleteReivew" parameterType="com.team2.danim.review.ReviewBean">
+	
+	delete from REVIEW_BOARD where rb_no = #{rb_no}
+	</delete>
+</mapper>
